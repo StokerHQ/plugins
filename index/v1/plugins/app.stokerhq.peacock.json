@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "registry": "stokerhq",
-  "serial": 1,
+  "serial": 2,
   "plugin": {
     "schemaVersion": "1.0",
     "key": "app.stokerhq.peacock",

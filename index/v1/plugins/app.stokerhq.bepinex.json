@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "registry": "stokerhq",
+  "serial": 2,
+  "plugin": {
+    "schemaVersion": "1.0",
+    "key": "app.stokerhq.bepinex",
+    "kind": "mod",
+    "name": "BepInEx",
+    "description": "BepInEx 5, the plugin and mod loader for Unity games, as BepInEx publishes it: the release zips unchanged. Mods for BepInEx need it in the same install.",
+    "authors": [
+      "BepInEx team"
+    ],
+    "license": "LGPL-2.1-only",
+    "homepage": "https://github.com/BepInEx/BepInEx",
+    "sourceCode": "https://github.com/BepInEx/BepInEx",
+    "notes": "Republished unchanged by StokerHQ from BepInEx's own releases (https://github.com/StokerHQ/bepinex-package), each file checked by SHA-256."
+  },
+  "versions": [
+    {
+      "schemaVersion": "1.0",
+      "key": "app.stokerhq.bepinex",
+      "version": "5.4.23.6",
+      "kind": "mod",
+      "release": {
+        "repository": "https://github.com/StokerHQ/bepinex-package",
+        "tag": "v5.4.23.6"
+      },
+      "source": {
+        "repository": "https://github.com/BepInEx/BepInEx",
+        "commit": "4865251c5251293dbd7040c1d8796d277857e47f"
+      },
+      "signature": {
+        "publisher": "stokerhq",
+        "algorithm": "ecdsa-p256-sha256",
+        "value": "4wRRwICWq5sZNCa2FIdXcpw1kvGTl1j0pu6+itLIyyqesKOdbTccNF0HAdAc21tL2hrrDWS2FgU8q0vJ+AKSGg=="
+      },
+      "loader": {
+        "name": "bepInEx5"
+      },
+      "files": [
+        {
+          "os": "linux",
+          "architecture": "x64",
+          "fileName": "BepInEx_linux_x64_5.4.23.6.zip",
+          "size": 646739,
+          "sha256": "f8ac87a97fb1ef85451c04ace1fddb7dd7eb0b079c179b989d6bc462c98bd365",
+          "blake3": "79e67dd424696457f20dbad52938824660ddb03aa39269bda6c993d2e6a63f1d",
+          "url": "https://github.com/StokerHQ/bepinex-package/releases/download/v5.4.23.6/BepInEx_linux_x64_5.4.23.6.zip"
+        },
+        {
+          "os": "windows",
+          "architecture": "x64",
+          "fileName": "BepInEx_win_x64_5.4.23.6.zip",
+          "size": 642076,
+          "sha256": "6c57a714a892efb4e9e1fef63d608a3391f30ec984031c465404e4ee381a0755",
+          "blake3": "1fb0d7f46bf011fb4600aff9a5c2800c5c850f0fd4a71d46d284b75b8fd9d424",
+          "url": "https://github.com/StokerHQ/bepinex-package/releases/download/v5.4.23.6/BepInEx_win_x64_5.4.23.6.zip"
+        },
+        {
+          "os": "windows",
+          "architecture": "x86",
+          "fileName": "BepInEx_win_x86_5.4.23.6.zip",
+          "size": 641457,
+          "sha256": "a4024dafaca5d3784097e34b3c2921415030c0b461e52f30053ed8914be9622d",
+          "blake3": "2b4e53f0b32d01f80eaf2d0df7a62e91497fb906432b906d80a648c346a3f594",
+          "url": "https://github.com/StokerHQ/bepinex-package/releases/download/v5.4.23.6/BepInEx_win_x86_5.4.23.6.zip"
+        }
+      ]
+    }
+  ]
+}
