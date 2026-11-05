@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/version.schema.json
+schemaVersion: "1.0"
+key: "app.stokerhq.peacock"
+version: "1.3.0"
+kind: "hook"
+release: { repository: "https://github.com/StokerHQ/peacock-plugin", tag: "v1.3.0" }
+source: { repository: "https://github.com/StokerHQ/peacock-plugin", commit: "2b6140aabd2ba96b991c344009b1ff8d07cbe8eb" }
+signature: { publisher: "stokerhq", algorithm: ecdsa-p256-sha256, value: "dgbu0GTtPDhZPNKOO8CAoqJMY5kNkf2rfADH6LTucLwEL4zvGObvz7two0UUhuYgRASJRVeE7F6u\u002BDPwYsxKGQ==" }
+abi: 1
+hosts: ["steamworks"]
+manifestSha256: "ae696556daffee5e81318f105608b99f5365daba5f00cc3b32e96f16db2e35db"
+config: {"type":"object","additionalProperties":false,"properties":{"process":{"type":"string","title":"Game executable","default":"HITMAN3.exe","description":"The executable to act in. File name only, ASCII case-insensitive.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$"},"port":{"type":"integer","title":"Port","default":0,"minimum":0,"maximum":65535,"description":"The port Peacock listens on, on 127.0.0.1 only, and which is written into the game's server address. 0 (automatic) takes a free port on every start. A fixed port that something other than Peacock holds is replaced by a free one; a Peacock already answering there is used."},"server":{"type":"boolean","title":"Start Peacock","default":true,"description":"Start the Peacock in the install. Off, the game is only pointed at the port (80 when it is automatic)."},"peacockFolder":{"type":"string","title":"Peacock folder","default":"Peacock","description":"The folder in the install root that the Peacock release was laid into, unchanged. Folder name only.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$"},"dataFolder":{"type":"string","title":"Data folder","default":"Stoker Peacock","description":"Peacock's working folder under %LOCALAPPDATA%: its userdata (the player's progress, which a cloud-save rule syncs), options and logs. Folder name only.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$"}}}
+files:
+  - os: windows
+    architecture: x64
+    fileName: "peacock-windows-x64.dll"
+    size: 269824
+    sha256: "031797b546635127038951a5b5c24d03edad06dc8c84706f955343c75c501d5b"
+    blake3: "9b645296f36a513d86d09318c01bff7b0a568d642df47537ebbd1d65f4ce9464"
+    url: "https://github.com/StokerHQ/peacock-plugin/releases/download/v1.3.0/peacock-windows-x64.dll"
