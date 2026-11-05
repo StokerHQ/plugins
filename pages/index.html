@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>%%REGISTRY_TITLE%% plugins</title>
+  <meta name="description" content="The %%REGISTRY_TITLE%% plugin registry for Stoker: every plugin and version, signed by its publisher.">
+  <!-- Filled in from registry.yaml by scripts/Build-Site.ps1. The page checks the index against this key, never against the key the index names itself. -->
+  <meta name="stoker-registry-name" content="%%REGISTRY_NAME%%">
+  <meta name="stoker-registry-title" content="%%REGISTRY_TITLE%%">
+  <meta name="stoker-registry-url" content="%%REGISTRY_URL%%">
+  <meta name="stoker-registry-key" content="%%REGISTRY_KEY%%">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ff7a3d' d='M16 2c2 6 9 9 9 17a9 9 0 0 1-18 0c0-4 2-7 4-9 0 3 1 5 3 6-1-6 0-10 2-14z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <link rel="modulepreload" href="app.js">
+  <link rel="modulepreload" href="vendor/fzstd.mjs">
+  <link rel="preload" href="index/v1/timestamp.json" as="fetch" crossorigin>
+  <link rel="preload" href="index/v1/timestamp.json.sig" as="fetch" crossorigin>
+  <link rel="preload" href="index/v1/plugins.json.zst" as="fetch" crossorigin>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#/">
+        <svg class="flame" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2c2 6 9 9 9 17a9 9 0 0 1-18 0c0-4 2-7 4-9 0 3 1 5 3 6-1-6 0-10 2-14z"/></svg>
+        <span><strong>%%REGISTRY_TITLE%%</strong> plugins</span>
+      </a>
+      <nav class="top-nav">
+        <a href="#/">Explore</a>
+        <a href="#/registry">Use this registry</a>
+        <a href="https://github.com/StokerHQ/plugins" rel="noopener">Source</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="trust" class="trust wrap" role="status" aria-live="polite">Checking the index…</div>
+
+  <main id="main" class="wrap" tabindex="-1">
+    <noscript><p class="notice">This page needs JavaScript to read the signed index. The index itself is at <a href="index/v1/timestamp.json">index/v1/timestamp.json</a>.</p></noscript>
+  </main>
+
+  <footer class="foot wrap">
+    <p>A registry for <a href="https://github.com/StokerHQ" rel="noopener">Stoker</a>. Every version is signed by its publisher and the index by the registry. This page checks both in your browser, and Stoker checks them again before anything is installed. The format is <a href="https://schemas.stokerhq.app/" rel="noopener">plugins v1</a>.</p>
+  </footer>
+</body>
+</html>

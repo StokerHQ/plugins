@@ -69,6 +69,23 @@ dotnet tool install -g StokerHQ.PluginRegistry.Tool      # .NET 10 SDK
 
    Publishing `site/index/v1/` (with `timestamp.json.sig`) is what makes the new index live.
 
+6. **Publish the website** from the gh-pages worktree (made once with `git worktree add ../plugins-gh-pages gh-pages`):
+
+   ```powershell
+   ./scripts/Publish-Site.ps1 -Worktree ../plugins-gh-pages -Push
+   ```
+
+   It verifies the index, builds the site and replaces the branch's content in one commit.
+
+## The website
+
+[plugins.stokerhq.app](https://plugins.stokerhq.app) is the explorer in `pages/`: a static page that reads the same
+signed index an instance reads, checks the index's signature, its pin and its expiry, and each version's publisher
+signature in the browser, and searches the index in memory. `scripts/Build-Site.ps1 -Out <new folder>` assembles it
+with the index for a local look (`py -m http.server --directory <folder>`); the registry's name, title, URL and key
+are filled into `index.html` from `registry.yaml`. `pages/vendor/fzstd.mjs` is fzstd 0.1.1 (MIT), unmodified,
+which decompresses the index.
+
 ## Checks
 
 Pull requests are checked by CI with the schemas repository's validator. It checks the format, the namespaces and the
