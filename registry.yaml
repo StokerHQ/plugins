@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/registry.schema.json
+schemaVersion: "1.0"
+name: stokerhq
+title: "StokerHQ"
+# Where the compiled, signed index is served: this repository's GitHub Pages, under this host.
+url: "https://plugins.stokerhq.app"
+# The registry key (id 2c8e24d616f09009). It signs the compiled index's timestamp and is held offline by the
+# registry's maintainer.
+key: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAM+pSsaq/yb/ca7s0Fl6/agiuMUZA1CS+2Am/0sxDHmQhpoRuQSzp56YrMRjW9uajCtZ8uSFEeQfSTbP8Rl2mA=="
+publishers:
+  - id: stokerhq
+    name: "StokerHQ"
+    # The StokerHQ publisher key (id 7f1c3ffabef00707): it signs every version of StokerHQ's own plugins.
+    publicKey: "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEnWiUqZn6AG7N1MEkDfFJNaYHm5oCFCABeJG9SPBaLzG2mCEEtHLcYqJlLsZE7AfryrIFTiXc/C4UGfBjuANPrQ=="
+    namespaces: ["app.stokerhq."]
+    homepage: "https://github.com/StokerHQ"
+policy:
+  # Kept out of the public registry: unpackers, and integrations that answer a store's ownership check.
+  refusedKinds: [unpacker]
+  refusedIntegrationProviders: [ubisoftConnect, epicOnlineServices]

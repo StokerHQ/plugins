@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/plugin.schema.json
+schemaVersion: "1.0"
+key: app.stokerhq.peacock
+kind: hook
+name: "Peacock (HITMAN World of Assassination)"
+description: "Starts the Peacock release laid into the install, with Stoker's Peacock plugin, and points HITMAN World of Assassination at it, as PeacockPatcher does."
+authors: ["StokerHQ"]
+license: AGPL-3.0-or-later
+homepage: "https://github.com/StokerHQ/peacock-plugin"
+sourceCode: "https://github.com/StokerHQ/peacock-plugin"
