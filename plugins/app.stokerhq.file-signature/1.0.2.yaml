@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/version.schema.json
+schemaVersion: "1.0"
+key: "app.stokerhq.file-signature"
+version: "1.0.2"
+kind: "hook"
+release: { repository: "https://github.com/StokerHQ/file-signature-plugin", tag: "v1.0.2" }
+source: { repository: "https://github.com/StokerHQ/file-signature-plugin", commit: "dbfc9534778aa6134cf028898c6e10d4e744aee7" }
+signature: { publisher: "stokerhq", algorithm: ecdsa-p256-sha256, value: "X4XXdDAIuth3TVC9fAOVm1haEQHIfirK1t7v2ERVVQLSsou7qe\u002BdSJi1NWVd8vwfSJWCqZmEGn9tuExUahW5Hg==" }
+abi: 1
+hosts: ["steamworks", "ubisoft", "galaxy"]
+manifestSha256: "dac9e5b82a0316aa7172fa923dc6ac8eb402beb8ebaef8bda846b81532024571"
+config: {"type":"object","additionalProperties":false,"properties":{"process":{"type":"string","title":"Game executable","description":"Only act in this executable. Omit to act in every process. File name only, ASCII case-insensitive.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$"},"match":{"type":"string","title":"File the game checks","description":"Exact final filename to redirect, ASCII case-insensitive. Directories and filename suffixes do not match.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$"},"replace":{"type":"string","title":"File to query instead","description":"Filename in the same directory. CryptQueryObject queries this file and preserves the original output parameters and result.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$"},"trustPolicy":{"type":"string","title":"WinVerifyTrust policy","default":"forward","enum":["forward","accept-matched","accept-all"],"description":"forward preserves verification. accept-matched accepts file checks for the configured filename. accept-all returns success for every WinVerifyTrust call in the selected process."},"logging":{"type":"string","title":"Call logging","default":"quiet","enum":["quiet","changes"],"description":"changes logs redirected file queries and accepted trust checks. Initialization is always logged."}},"required":["match","replace"]}
+files:
+  - os: windows
+    architecture: x64
+    fileName: "file-signature-windows-x64.dll"
+    size: 157696
+    sha256: "3ee81640b0bf0dd18d916957b5d04a2f3295e28c03ccb3ac4d9609cb30d37e7c"
+    blake3: "50cba14f0d2d6fc63d976dc37a9bfd2e1620b464bc49b9b0a16660e27ac33e35"
+    url: "https://github.com/StokerHQ/file-signature-plugin/releases/download/v1.0.2/file-signature-windows-x64.dll"
+  - os: windows
+    architecture: x86
+    fileName: "file-signature-windows-x86.dll"
+    size: 121344
+    sha256: "1931a38bffefb34947405a5470b0a63dc93ada5afa2d691e02dbe4d4ed507d96"
+    blake3: "81e1628943a14940f562f6e8219d69f03785ce8b28c2b4d6d80cfa49e1f62dfb"
+    url: "https://github.com/StokerHQ/file-signature-plugin/releases/download/v1.0.2/file-signature-windows-x86.dll"

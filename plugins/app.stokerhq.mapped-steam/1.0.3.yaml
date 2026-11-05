@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/version.schema.json
+schemaVersion: "1.0"
+key: "app.stokerhq.mapped-steam"
+version: "1.0.3"
+kind: "hook"
+release: { repository: "https://github.com/StokerHQ/mapped-steam-plugin", tag: "v1.0.3" }
+source: { repository: "https://github.com/StokerHQ/mapped-steam-plugin", commit: "6f33aea0e3463d07d9a9ae624494e8eb45907418" }
+signature: { publisher: "stokerhq", algorithm: ecdsa-p256-sha256, value: "AdIn63ZqeR88M5/v87axwVrfYlffjEoofIVqeVnUVf\u002B5ymmZVOPvl3jNKpcGYeQMoMu5yaMXoisINmuBqT15EQ==" }
+abi: 1
+hosts: ["steamworks"]
+manifestSha256: "9ad45cf00978ee7f6c4d2ffcf23b2e44f84a39546e05def2b7af686041aa00aa"
+config: {"type":"object","additionalProperties":false,"properties":{"process":{"type":"string","title":"Game executable","description":"Only redirect inside this executable. Omit to act in every process. File name only, compared without regard to case.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$","examples":["Game.exe"]},"image":{"type":"string","title":"Embedded library name","description":"The DLL name in the private image's export directory. File name only.","default":"steam_api64.dll","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$"},"remoteStorageVersion":{"type":"string","title":"Unversioned RemoteStorage interface","description":"Override the layout returned by SteamRemoteStorage. Omit to keep the bootstrap's legacy layout.","enum":["012","014","016"]},"bootstrap":{"type":"string","title":"Loaded bootstrap DLL","description":"The loaded Stoker bootstrap that supplies replacement code exports. File name only.","default":"steam_api64.dll","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$"}}}
+files:
+  - os: windows
+    architecture: x64
+    fileName: "mapped-steam-windows-x64.dll"
+    size: 189952
+    sha256: "4afad160e816cbcb90a3770e95aeb502c4c0b31b659f5d443f2461725b685604"
+    blake3: "1a00314426a69b5316552103cd8efcb5e68f0a6c9bb8cdb472ab650c28fb8489"
+    url: "https://github.com/StokerHQ/mapped-steam-plugin/releases/download/v1.0.3/mapped-steam-windows-x64.dll"

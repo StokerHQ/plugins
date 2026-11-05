@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/plugin.schema.json
+schemaVersion: "1.0"
+key: app.stokerhq.bepinex
+kind: mod
+name: "BepInEx"
+description: "BepInEx 5, the plugin and mod loader for Unity games, as BepInEx publishes it: the release zips unchanged. Mods for BepInEx need it in the same install."
+authors: ["BepInEx team"]
+license: LGPL-2.1-only
+homepage: "https://github.com/BepInEx/BepInEx"
+sourceCode: "https://github.com/BepInEx/BepInEx"
+notes: "Republished unchanged by StokerHQ from BepInEx's own releases (https://github.com/StokerHQ/bepinex-package), each file checked by SHA-256."

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/plugin.schema.json
+schemaVersion: "1.0"
+key: app.stokerhq.mapped-steam
+kind: hook
+name: "Mapped Steam library redirect"
+description: "Points the exports of a Steamworks library a program maps into memory itself, rather than loading it through Windows, at the loaded Stoker bootstrap."
+authors: ["StokerHQ"]
+license: AGPL-3.0-or-later
+homepage: "https://github.com/StokerHQ/mapped-steam-plugin"
+sourceCode: "https://github.com/StokerHQ/mapped-steam-plugin"

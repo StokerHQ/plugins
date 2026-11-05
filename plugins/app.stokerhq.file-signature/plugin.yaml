@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/plugin.schema.json
+schemaVersion: "1.0"
+key: app.stokerhq.file-signature
+kind: hook
+name: "File signature policy"
+description: "For an integration that replaces a signed library: answers a program's signature checks of that library from the original file kept beside it. Changes no file on disk."
+authors: ["StokerHQ"]
+license: AGPL-3.0-or-later
+homepage: "https://github.com/StokerHQ/file-signature-plugin"
+sourceCode: "https://github.com/StokerHQ/file-signature-plugin"

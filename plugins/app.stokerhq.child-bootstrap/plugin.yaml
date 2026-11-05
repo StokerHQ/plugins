@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/plugin.schema.json
+schemaVersion: "1.0"
+key: app.stokerhq.child-bootstrap
+kind: hook
+name: "Child bootstrap"
+description: "Carries a Stoker bootstrap into a child process that would never load one, such as the program a launcher starts, and hands the running session over to it before the child runs any code of its own."
+authors: ["StokerHQ"]
+license: AGPL-3.0-or-later
+homepage: "https://github.com/StokerHQ/child-bootstrap-plugin"
+sourceCode: "https://github.com/StokerHQ/child-bootstrap-plugin"
