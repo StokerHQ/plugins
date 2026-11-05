@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/version.schema.json
+schemaVersion: "1.0"
+key: "app.stokerhq.child-bootstrap"
+version: "1.0.3"
+kind: "hook"
+release: { repository: "https://github.com/StokerHQ/child-bootstrap-plugin", tag: "v1.0.3" }
+source: { repository: "https://github.com/StokerHQ/child-bootstrap-plugin", commit: "489de2bef49dd281a46a1daffc528100df81c2af" }
+signature: { publisher: "stokerhq", algorithm: ecdsa-p256-sha256, value: "ZKiolpdjhXOLIkyH6S/Q8yxL9eA\u002B6mAGkI6o8xCWLw5BOoTwLKxOphrZqfJn68kWdaMforJJJjULgmRmjwagAA==" }
+abi: 1
+hosts: ["steamworks", "ubisoft", "galaxy", "eos"]
+manifestSha256: "ce6bc50edaaa5944aa3b67f3d9c10f3fe2e861d92fc306fe0b7828f606c711c6"
+config: {"type":"object","additionalProperties":false,"properties":{"process":{"type":"string","title":"Parent executable","description":"Only act inside this executable. Omit to act in every process. File name only, compared without regard to case.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$","examples":["Launcher.exe"]},"executable":{"type":"string","title":"Child executable","description":"The child whose bootstrap and session should be prepared before its main thread runs. File name only.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$","examples":["Game.exe"]},"bootstrap":{"type":"string","title":"Bootstrap DLL","description":"Loaded from the child's executable folder, where stoker_hooks.json must also be installed.","minLength":1,"maxLength":259,"pattern":"^(?!\\.{1,2}$)[^\\\\/:]+$","examples":["steam_api64.dll"]}},"required":["executable","bootstrap"]}
+files:
+  - os: windows
+    architecture: x64
+    fileName: "child-bootstrap-windows-x64.dll"
+    size: 188416
+    sha256: "613592eaf01f25eafc5dcc79af50739c89abcb5d9ae4057ea53d5acebeb9b0cf"
+    blake3: "5985164fa50df4fa4905a7529c5c9df9d988e10d4f8b8d03fbdd104bb617787c"
+    url: "https://github.com/StokerHQ/child-bootstrap-plugin/releases/download/v1.0.3/child-bootstrap-windows-x64.dll"
+  - os: windows
+    architecture: x86
+    fileName: "child-bootstrap-windows-x86.dll"
+    size: 148480
+    sha256: "6295d41859232195b86517950e5919bd3e81d8d34143bbed864b0b1d4334f633"
+    blake3: "e02e6ef1635a2551c775f129bd51772d454acb6c935afa12920842258bb50d14"
+    url: "https://github.com/StokerHQ/child-bootstrap-plugin/releases/download/v1.0.3/child-bootstrap-windows-x86.dll"
