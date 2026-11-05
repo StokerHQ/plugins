@@ -30,10 +30,10 @@ param(
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
+# No declared parameters, so every argument (-C, -A, -rq …) reaches git as written and none binds to this function.
 function Invoke-Git {
-    param([Parameter(ValueFromRemainingArguments)][string[]]$Arguments)
-    $output = & git @Arguments
-    if ($LASTEXITCODE) { throw "git $($Arguments -join ' ') failed ($LASTEXITCODE)." }
+    $output = & git @args
+    if ($LASTEXITCODE) { throw "git $($args -join ' ') failed ($LASTEXITCODE)." }
     $output
 }
 
@@ -62,7 +62,7 @@ if (Test-Path -LiteralPath $build) {
 }
 & (Join-Path $PSScriptRoot 'Build-Site.ps1') -Out $build
 
-Invoke-Git -C $worktree rm -rq --ignore-unmatch -- . | Out-Null
+Invoke-Git -C $worktree rm -rq --ignore-unmatch '--' . | Out-Null
 Copy-Item -Path (Join-Path $build '*') -Destination $worktree -Recurse -Force
 Copy-Item -LiteralPath (Join-Path $build '.nojekyll') -Destination $worktree -Force
 Invoke-Git -C $worktree add -A | Out-Null
