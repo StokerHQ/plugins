@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "registry": "stokerhq",
+  "serial": 1,
+  "generated": "2026-11-05T15:03:30Z",
+  "expires": "2026-12-05T15:03:30Z",
+  "index": {
+    "sha256": "6c5e973d801054f27ac7284d2c78be8a953ac2c1a247a3bbb278676114d27509",
+    "size": 1681
+  },
+  "plugins": [
+    {
+      "key": "app.stokerhq.peacock",
+      "sha256": "c0bd8a026e7cf8aff2b6400f330ac79930bb5ccd53fbcd61a18f0ed01b84b445",
+      "size": 3898
+    }
+  ]
+}
