@@ -1,37 +1,37 @@
 {
   "schemaVersion": "1.0",
   "registry": "stokerhq",
-  "serial": 2,
-  "generated": "2026-11-05T18:49:52Z",
-  "expires": "2026-12-05T18:49:52Z",
+  "serial": 3,
+  "generated": "2026-11-05T19:14:50Z",
+  "expires": "2026-12-05T19:14:50Z",
   "index": {
-    "sha256": "66bb212aa820d3dd2f3004915cc32b7354b88f8ce87bc56042aaa17e9f26d24d",
-    "size": 4515
+    "sha256": "e81b9ce40c175073d7953a98f488b10b1e7fc0285ae03fc608233c43a681bf41",
+    "size": 5210
   },
   "plugins": [
     {
       "key": "app.stokerhq.bepinex",
-      "sha256": "97b81f8453ae17d86ab32ff8075ea4f46bb432aa3d534bbe6b51143bf747abfc",
+      "sha256": "4fad6a3a86e9a8b56a687865073a21bf2aee4e28d6b6f30e23e3a9dc77ab594e",
       "size": 2796
     },
     {
       "key": "app.stokerhq.child-bootstrap",
-      "sha256": "504111f52ef498d4f63b1c799ab8899dd3a9d61e05ddf0e4833ebddeb5aa1b57",
-      "size": 3919
+      "sha256": "eb93475a8d4de6af27189c6a238667b87a9c7d398635df37a37cc85443774506",
+      "size": 7184
     },
     {
       "key": "app.stokerhq.file-signature",
-      "sha256": "cbc96ed84c84c80319ea8fa87b03dc31a82e68a470831d16359c578dab960437",
-      "size": 4517
+      "sha256": "ec94debe01247207c728224779c9947a97ca6028ff2b441f4b50c572bdb3a2f2",
+      "size": 8407
     },
     {
       "key": "app.stokerhq.mapped-steam",
-      "sha256": "94004ce44b36a577c816f5aa6f3273bdfa9a17ff6ea29066b7373b1997e7ad08",
+      "sha256": "2a6f8668e17dc939738fb90d1d180141ae300c27564b6aa05bb8a77dab42067c",
       "size": 3550
     },
     {
       "key": "app.stokerhq.peacock",
-      "sha256": "f884d571ef64ed34f7e438ab2c8577038f866ad21ce9344f241c361b5f1ff58b",
+      "sha256": "574a079abf40ac9ac30f4851ea78a8309b115664669c0c1bcc1cbee46756f324",
       "size": 3898
     }
   ]

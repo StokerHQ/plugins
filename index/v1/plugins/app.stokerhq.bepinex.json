@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "registry": "stokerhq",
-  "serial": 2,
+  "serial": 3,
   "plugin": {
     "schemaVersion": "1.0",
     "key": "app.stokerhq.bepinex",
