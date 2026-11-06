@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "registry": "stokerhq",
-  "serial": 3,
+  "serial": 4,
   "plugin": {
     "schemaVersion": "1.0",
     "key": "app.stokerhq.mapped-steam",

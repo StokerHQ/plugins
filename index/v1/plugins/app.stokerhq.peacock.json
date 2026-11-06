@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "registry": "stokerhq",
-  "serial": 3,
+  "serial": 4,
   "plugin": {
     "schemaVersion": "1.0",
     "key": "app.stokerhq.peacock",
@@ -95,6 +95,90 @@
           "sha256": "031797b546635127038951a5b5c24d03edad06dc8c84706f955343c75c501d5b",
           "blake3": "9b645296f36a513d86d09318c01bff7b0a568d642df47537ebbd1d65f4ce9464",
           "url": "https://github.com/StokerHQ/peacock-plugin/releases/download/v1.3.0/peacock-windows-x64.dll"
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0",
+      "key": "app.stokerhq.peacock",
+      "version": "1.4.0",
+      "kind": "hook",
+      "release": {
+        "repository": "https://github.com/StokerHQ/peacock-plugin",
+        "tag": "v1.4.0"
+      },
+      "source": {
+        "repository": "https://github.com/StokerHQ/peacock-plugin",
+        "commit": "ae1a5ac3c5ae32171774a7357c25621438411482"
+      },
+      "signature": {
+        "publisher": "stokerhq",
+        "algorithm": "ecdsa-p256-sha256",
+        "value": "JaO4yGpcLJdh0lfRsxktQSNDjeYlLVMGpN0Lfpb2s+MwwCIKnl2CXt1z1/rXBzoRYHHRfuG/seWZ6FeFt46lFQ=="
+      },
+      "released": "2026-11-06",
+      "notes": "- **Presence:** tells the Stoker launcher what the player is doing, for their friends - In Menu, Planning · <mission> · <location>, the mission with its mode (Escalation and its level, Elusive Target, Arcade, Freelancer, Sniper Assassin, Contract, Sarajevo Six), location and difficulty, and the mission debrief. The launcher prefers it over the game's own Steam presence, which says only \"In Menu\". Needs a launcher that offers the presence capability; with an older one the game's own presence stays.\n- The leaderboard after a mission shows the board for the difficulty played. Peacock read the difficulty from a parameter the game does not send and showed an empty board.\n- The leaderboard's Friends tab, which Peacock does not serve, shows the player and their Stoker friends from the Stoker board.\n",
+      "abi": 1,
+      "hosts": [
+        "steamworks"
+      ],
+      "manifestSha256": "52c122b8115ca55665b723391b1992cbbd7015734ff0b41560390ae86a680b00",
+      "config": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "process": {
+            "type": "string",
+            "title": "Game executable",
+            "default": "HITMAN3.exe",
+            "description": "The executable to act in. File name only, ASCII case-insensitive.",
+            "minLength": 1,
+            "maxLength": 259,
+            "pattern": "^(?!\\.{1,2}$)[^\\\\/:]+$"
+          },
+          "port": {
+            "type": "integer",
+            "title": "Port",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 65535,
+            "description": "The port Peacock listens on, on 127.0.0.1 only, and which is written into the game's server address. 0 (automatic) takes a free port on every start. A fixed port that something other than Peacock holds is replaced by a free one; a Peacock already answering there is used."
+          },
+          "server": {
+            "type": "boolean",
+            "title": "Start Peacock",
+            "default": true,
+            "description": "Start the Peacock in the install. Off, the game is only pointed at the port (80 when it is automatic)."
+          },
+          "peacockFolder": {
+            "type": "string",
+            "title": "Peacock folder",
+            "default": "Peacock",
+            "description": "The folder in the install root that the Peacock release was laid into, unchanged. Folder name only.",
+            "minLength": 1,
+            "maxLength": 259,
+            "pattern": "^(?!\\.{1,2}$)[^\\\\/:]+$"
+          },
+          "dataFolder": {
+            "type": "string",
+            "title": "Data folder",
+            "default": "Stoker Peacock",
+            "description": "Peacock's working folder under %LOCALAPPDATA%: its userdata (the player's progress, which a cloud-save rule syncs), options and logs. Folder name only.",
+            "minLength": 1,
+            "maxLength": 259,
+            "pattern": "^(?!\\.{1,2}$)[^\\\\/:]+$"
+          }
+        }
+      },
+      "files": [
+        {
+          "os": "windows",
+          "architecture": "x64",
+          "fileName": "peacock-windows-x64.dll",
+          "size": 284672,
+          "sha256": "dda4065a6b1366bf20c78a6a20e401a8a6050eeb9ff7f644e2f83313276bda73",
+          "blake3": "96c488faa88f5ce52f78499994cfbcde27292d4ffe6dc95a85139fcf8b5bb0b8",
+          "url": "https://github.com/StokerHQ/peacock-plugin/releases/download/v1.4.0/peacock-windows-x64.dll"
         }
       ]
     }
