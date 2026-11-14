@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "registry": "stokerhq",
+  "serial": 6,
+  "plugin": {
+    "schemaVersion": "1.0",
+    "key": "app.stokerhq.library-redirect",
+    "kind": "hook",
+    "name": "Library load redirect",
+    "description": "Redirects a named DLL load to a Stoker-provided replacement in the launcher's runtime folder, so a game never needs the original redistributable installed. Inert until that replacement ships.",
+    "authors": [
+      "StokerHQ"
+    ],
+    "license": "AGPL-3.0-or-later",
+    "homepage": "https://github.com/StokerHQ/library-redirect-plugin",
+    "sourceCode": "https://github.com/StokerHQ/library-redirect-plugin"
+  },
+  "versions": [
+    {
+      "schemaVersion": "1.0",
+      "key": "app.stokerhq.library-redirect",
+      "version": "0.1.0",
+      "kind": "hook",
+      "release": {
+        "repository": "https://github.com/StokerHQ/library-redirect-plugin",
+        "tag": "v0.1.0"
+      },
+      "source": {
+        "repository": "https://github.com/StokerHQ/library-redirect-plugin",
+        "commit": "184e8d7269f29305b61be442f3c4de90c2bfcab4"
+      },
+      "signature": {
+        "publisher": "stokerhq",
+        "algorithm": "ecdsa-p256-sha256",
+        "value": "dTM7dBb6DLOmRoREhPMpUJ+OcRiL0Omx7KU32u7mrupLXOE7ntt24Rg6xQoVK9zZe8plXz43wcK6eThI17AQXQ=="
+      },
+      "released": "2026-11-14",
+      "notes": "Initial release: redirect a named DLL load to a Stoker-provided runtime replacement.\n",
+      "abi": 1,
+      "hosts": [
+        "steamworks",
+        "ubisoft",
+        "galaxy",
+        "eos"
+      ],
+      "manifestSha256": "fc75fa684a073da33ea8bc3de0770cf2d1040f6f1da9e6fe16faaa33421f6b77",
+      "config": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "match": {
+            "type": "string",
+            "title": "Match",
+            "minLength": 1,
+            "pattern": "^[^\\\\/:]+$",
+            "description": "File name of the DLL whose load to catch, matched on the file name component, case-insensitively.",
+            "examples": [
+              "socialclub.dll"
+            ]
+          },
+          "replace": {
+            "type": "string",
+            "title": "Replace with",
+            "minLength": 1,
+            "pattern": "^[^\\\\/:]+$",
+            "description": "File name of the replacement DLL in the launcher's runtime folder to load instead.",
+            "examples": [
+              "stoker_socialclub.dll"
+            ]
+          },
+          "process": {
+            "type": "string",
+            "title": "Process",
+            "pattern": "^[^\\\\/:]+$",
+            "description": "File name of the executable to act in (e.g. GTA5_Enhanced.exe); absent means every process the modules enter."
+          }
+        },
+        "required": [
+          "match",
+          "replace"
+        ]
+      },
+      "files": [
+        {
+          "os": "windows",
+          "architecture": "x64",
+          "fileName": "library-redirect-windows-x64.dll",
+          "size": 161280,
+          "sha256": "464e66f4704302f76de287b192af0a8b0d48fc469f9c1097a502b190926b5ba4",
+          "blake3": "0e4201b1f8f6718362656dae63259b9297ee8c4e149a981ca1d0e20067b2e2c0",
+          "url": "https://github.com/StokerHQ/library-redirect-plugin/releases/download/v0.1.0/library-redirect-windows-x64.dll"
+        },
+        {
+          "os": "windows",
+          "architecture": "x86",
+          "fileName": "library-redirect-windows-x86.dll",
+          "size": 124416,
+          "sha256": "d7aee20a605c50d00c6c2d4fbe73d4f40c76e8c6d7f72341a03df8d7c0f0094e",
+          "blake3": "faa8493d5fe4d082797ec021b223e56c58d77537136dd854cdf86b203d0801e7",
+          "url": "https://github.com/StokerHQ/library-redirect-plugin/releases/download/v0.1.0/library-redirect-windows-x86.dll"
+        }
+      ]
+    }
+  ]
+}
