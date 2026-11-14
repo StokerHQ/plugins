@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://schemas.stokerhq.app/plugins/v1/plugin.schema.json
+schemaVersion: "1.0"
+key: app.stokerhq.library-redirect
+kind: hook
+name: "Library load redirect"
+description: "Redirects a named DLL load to a Stoker-provided replacement in the launcher's runtime folder, so a game never needs the original redistributable installed. Inert until that replacement ships."
+authors: ["StokerHQ"]
+license: AGPL-3.0-or-later
+homepage: "https://github.com/StokerHQ/library-redirect-plugin"
+sourceCode: "https://github.com/StokerHQ/library-redirect-plugin"
